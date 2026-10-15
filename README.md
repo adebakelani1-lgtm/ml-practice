@@ -1,13 +1,17 @@
-# ML practice
+# Wine origin analysis
 
-A small Python project for practicing data preparation and machine learning.
-Uses the wine dataset included with scikit-learn: 178 samples, 13 measurements,
-and 3 wine groups. The groups describe cultivars, not wine quality.
+This project uses measurements from 178 wines to answer two questions:
+
+1. Can the measurements estimate a wine's alcohol level?
+2. Can they identify its cultivar group?
+
+The analysis prepares the data, fits a regression model, fits a classifier,
+and compares a few classification models.
 
 ```bash
 python -m pip install -r requirements.txt
-python week1_preparation.py
+python wine_analysis.py
 ```
 
-The weekly topics are preparation, regression, classification, and algorithms.
-Each script prints its results. This is a small practice dataset.
+The dataset is included with scikit-learn. The groups describe cultivars,
+not wine quality.
