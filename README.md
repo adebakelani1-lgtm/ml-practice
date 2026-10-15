@@ -1,17 +1,16 @@
-# Wine origin analysis
+# Cellular network quality
 
-This project uses measurements from 178 wines to answer two questions:
+This project looks at a simple product question: can network measurements
+predict a poor mobile connection before a customer reports it?
 
-1. Can the measurements estimate a wine's alcohol level?
-2. Can they identify its cultivar group?
-
-The analysis prepares the data, fits a regression model, fits a classifier,
-and compares a few classification models.
+The script creates a reproducible sample of 4G and 5G cell measurements,
+checks the data, estimates throughput, and flags poor quality connections.
+The sample is synthetic, so the project shows the method rather than making
+claims about a real carrier network.
 
 ```bash
 python -m pip install -r requirements.txt
-python wine_analysis.py
+python network_quality_analysis.py
 ```
 
-The dataset is included with scikit-learn. The groups describe cultivars,
-not wine quality.
+The report includes the errors, accuracy, and the features used by the model.

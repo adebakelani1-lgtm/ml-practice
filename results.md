@@ -1,13 +1,14 @@
 # Results
 
-The first run found 178 rows, 13 measurements, no missing values, and no
-duplicate rows. The three cultivar groups had 59, 71, and 48 wines.
+The sample has 600 connection records. Eighteen latency values were missing,
+so the model filled them with the training median. The poor quality label is a
+simple product rule based on low throughput or high packet loss.
 
-The linear model estimated alcohol within about 0.43 percentage points on the
-held-out set. The entropy based tree identified the cultivar group with 97.2%
-accuracy on that same split.
+The first run estimated throughput with a mean absolute error of about 7 Mbps.
+The classifier reached 91.7% accuracy and an ROC AUC of 0.977. The
+largest throughput effects came from bandwidth, signal strength, cell load,
+and latency.
 
-In five fold cross validation, logistic regression and SVM both reached 98.3%,
-while the tree reached 90.4%. Scaling helped the models
-that use distances or a linear boundary. These scores describe this small
-dataset and should not be read as a test of wine quality.
+This is a synthetic project. A real network team would replace the generator
+with timestamped cell data, check the label with customer experience measures,
+and evaluate performance across locations and time periods.
